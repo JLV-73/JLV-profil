@@ -1,0 +1,1846 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <meta
+    name="description"
+    content="Présentation professionnelle de Jean-Louis Viretti : parcours dans le BTP, regard photographique et engagement actif dans l'intelligence artificielle."
+  >
+  <title>Jean-Louis Viretti | Parcours, expertise, regard, innovation</title>
+  <style>
+    :root {
+      --bg: #07080b;
+      --bg-elevated: rgba(16, 18, 24, 0.84);
+      --bg-soft: rgba(21, 24, 31, 0.74);
+      --surface: rgba(255, 255, 255, 0.045);
+      --surface-strong: rgba(255, 255, 255, 0.075);
+      --line: rgba(255, 255, 255, 0.11);
+      --line-strong: rgba(214, 187, 142, 0.33);
+      --text: #eef1f7;
+      --text-soft: #c7ceda;
+      --text-muted: #8c95a6;
+      --accent: #d6bb8e;
+      --accent-strong: #f0d8b0;
+      --accent-cool: #8ba3c7;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.34);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 16px;
+      --radius-sm: 12px;
+      --container: min(1180px, calc(100% - 2rem));
+      --font-sans: "Segoe UI Variable Text", "Aptos", "Segoe UI", system-ui, sans-serif;
+      --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Georgia", serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(139, 163, 199, 0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(214, 187, 142, 0.12), transparent 26%),
+        linear-gradient(180deg, #06070a 0%, #090b10 38%, #06070a 100%);
+      line-height: 1.7;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: auto;
+      pointer-events: none;
+      z-index: -1;
+      filter: blur(70px);
+      opacity: 0.5;
+    }
+
+    body::before {
+      width: 320px;
+      height: 320px;
+      background: rgba(214, 187, 142, 0.12);
+      top: 10%;
+      right: -80px;
+    }
+
+    body::after {
+      width: 280px;
+      height: 280px;
+      background: rgba(139, 163, 199, 0.1);
+      bottom: 12%;
+      left: -90px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: var(--container);
+      margin-inline: auto;
+    }
+
+    .topbar {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 30;
+      padding: 0.9rem 0;
+      transition: background-color 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+    }
+
+    .topbar.is-scrolled {
+      background: rgba(7, 8, 11, 0.72);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
+    }
+
+    .topbar-inner {
+      width: var(--container);
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      color: var(--text-soft);
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      position: relative;
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background:
+        linear-gradient(135deg, rgba(214, 187, 142, 0.18), rgba(139, 163, 199, 0.08)),
+        rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(214, 187, 142, 0.3);
+      color: var(--accent-strong);
+      font-weight: 700;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .brand-mark img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .brand-mark-fallback {
+      position: relative;
+      z-index: 0;
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .brand-mark.has-logo .brand-mark-fallback {
+      opacity: 0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      overflow-x: auto;
+      padding-bottom: 0.15rem;
+      scrollbar-width: none;
+    }
+
+    .nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav a {
+      color: var(--text-muted);
+      font-size: 0.93rem;
+      padding: 0.55rem 0.9rem;
+      border-radius: 999px;
+      transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+      white-space: nowrap;
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible,
+    .nav a.active {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.06);
+      outline: none;
+      transform: translateY(-1px);
+    }
+
+    main {
+      padding-top: 6.2rem;
+    }
+
+    section {
+      position: relative;
+      padding: 5.5rem 0;
+    }
+
+    section + section::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: min(920px, 100%);
+      height: 1px;
+      background: linear-gradient(90deg, rgba(214, 187, 142, 0.18), rgba(255, 255, 255, 0.02), transparent);
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin: 0;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .kicker::before {
+      content: "";
+      width: 42px;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(214, 187, 142, 0.75), rgba(214, 187, 142, 0));
+    }
+
+    .section-heading {
+      max-width: 780px;
+      display: grid;
+      gap: 0.95rem;
+      margin-bottom: 2.4rem;
+    }
+
+    .section-heading h2,
+    .section-heading h3,
+    .hero-copy h1 {
+      margin: 0;
+      font-family: var(--font-serif);
+      font-weight: 600;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(3rem, 6vw, 5.4rem);
+      max-width: 12ch;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 3.4vw, 3rem);
+    }
+
+    .section-heading p,
+    .hero-copy p,
+    .card p,
+    .timeline-content p,
+    .quote-card p,
+    .conclusion-card p {
+      margin: 0;
+      color: var(--text-soft);
+    }
+
+    .hero {
+      padding-top: 7rem;
+      min-height: calc(100vh - 6.2rem);
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.78fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-copy {
+      display: grid;
+      gap: 1.4rem;
+    }
+
+    .hero-intro {
+      font-size: 1.06rem;
+      max-width: 64ch;
+    }
+
+    .eyebrow-row,
+    .hero-meta,
+    .tag-row,
+    .metric-grid,
+    .skill-tags,
+    .process-row,
+    .recognition-grid,
+    .adn-grid,
+    .gallery-grid,
+    .btp-skills,
+    .formation-grid,
+    .info-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .eyebrow-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.55rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(214, 187, 142, 0.22);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-soft);
+      font-size: 0.92rem;
+    }
+
+    .pill strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .subtitle {
+      color: var(--text-soft);
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 0.4rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0.85rem 1.25rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 600;
+      transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+    }
+
+    .button.primary {
+      color: #101217;
+      background: linear-gradient(135deg, var(--accent-strong), #caa46a);
+      box-shadow: 0 10px 30px rgba(214, 187, 142, 0.18);
+    }
+
+    .button.secondary {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .panel,
+    .card,
+    .quote-card,
+    .timeline-item,
+    .visual-card,
+    .conclusion-card {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02)),
+        var(--bg-elevated);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .panel {
+      padding: 1.6rem;
+    }
+
+    .logo-panel {
+      padding: 1.6rem;
+      display: grid;
+      gap: 1.1rem;
+      min-height: 420px;
+    }
+
+    .hero-note {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .hero-note strong {
+      color: var(--text);
+    }
+
+    .metric-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .metric-card {
+      padding: 1.15rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: var(--bg-soft);
+    }
+
+    .metric-card strong {
+      display: block;
+      font-size: 1.3rem;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+      font-family: var(--font-serif);
+      font-weight: 600;
+    }
+
+    .metric-card span {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .media-slot {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      border-radius: calc(var(--radius-xl) - 6px);
+      background:
+        radial-gradient(circle at 20% 20%, rgba(214, 187, 142, 0.16), transparent 38%),
+        radial-gradient(circle at 80% 18%, rgba(139, 163, 199, 0.14), transparent 30%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .logo-slot {
+      min-height: 285px;
+      display: grid;
+      place-items: center;
+      padding: 1.4rem;
+    }
+
+    .portrait-slot {
+      min-height: 460px;
+    }
+
+    .gallery-slot {
+      min-height: 360px;
+    }
+
+    .slot-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .slot-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(7, 8, 11, 0.04), rgba(7, 8, 11, 0.4) 68%, rgba(7, 8, 11, 0.82)),
+        linear-gradient(135deg, rgba(214, 187, 142, 0.08), transparent 42%);
+      z-index: 1;
+    }
+
+    .slot-frame {
+      position: absolute;
+      inset: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: calc(var(--radius-xl) - 12px);
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .media-fallback {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 1.2rem;
+      text-align: center;
+      color: var(--accent-strong);
+      font-family: var(--font-serif);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      z-index: 2;
+      transition: opacity 220ms ease, visibility 220ms ease;
+    }
+
+    .media-slot.has-image .media-fallback {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .media-slot.has-image.logo-slot {
+      background: rgba(6, 7, 10, 0.95);
+    }
+
+    .logo-slot .media-fallback {
+      font-size: clamp(3rem, 8vw, 5rem);
+      letter-spacing: 0.16em;
+    }
+
+    .gallery-slot .media-fallback {
+      font-size: 1.1rem;
+    }
+
+    .slot-caption {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 1.35rem 1.35rem 1.45rem;
+      z-index: 4;
+    }
+
+    .slot-caption strong,
+    .card h3,
+    .timeline-content h3,
+    .visual-card figcaption strong,
+    .conclusion-card h2 {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .slot-caption span,
+    .card small,
+    .timeline-meta,
+    .visual-card figcaption span,
+    .muted-note {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .intro-grid,
+    .identity-grid,
+    .btp-layout,
+    .photo-grid,
+    .ia-grid,
+    .conclusion-grid {
+      display: grid;
+      gap: 1.4rem;
+    }
+
+    .identity-grid,
+    .photo-grid,
+    .conclusion-grid {
+      grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+      align-items: start;
+    }
+
+    .formation-grid,
+    .recognition-grid,
+    .info-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+      padding: 1.45rem;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
+        rgba(17, 19, 25, 0.88);
+    }
+
+    .card h3 {
+      font-size: 1.18rem;
+    }
+
+    .card-list {
+      display: grid;
+      gap: 0.85rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .card-list li {
+      position: relative;
+      padding-left: 1.1rem;
+      color: var(--text-soft);
+    }
+
+    .card-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-cool));
+    }
+
+    .text-link {
+      color: var(--accent-strong);
+      text-decoration: underline;
+      text-decoration-color: rgba(214, 187, 142, 0.35);
+      text-underline-offset: 0.18em;
+      transition: color 180ms ease, text-decoration-color 180ms ease;
+    }
+
+    .text-link:hover,
+    .text-link:focus-visible {
+      color: var(--text);
+      text-decoration-color: rgba(255, 255, 255, 0.45);
+      outline: none;
+    }
+
+    .portrait-card {
+      position: sticky;
+      top: 6.6rem;
+      display: grid;
+      gap: 1rem;
+      padding: 1.2rem;
+    }
+
+    .portrait-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .btp-layout {
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.86fr);
+      align-items: start;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 1rem;
+      padding-left: 1.8rem;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 0.45rem;
+      top: 0.3rem;
+      bottom: 0.3rem;
+      width: 1px;
+      background: linear-gradient(180deg, rgba(214, 187, 142, 0.7), rgba(139, 163, 199, 0.16));
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 1.35rem 1.35rem 1.35rem 1.55rem;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -1.72rem;
+      top: 1.55rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid rgba(214, 187, 142, 0.9);
+      background: #0a0c11;
+      box-shadow: 0 0 0 8px rgba(214, 187, 142, 0.08);
+    }
+
+    .timeline-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.45rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.72rem;
+    }
+
+    .btp-skills {
+      grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+      padding: 1.35rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .skill-card h3 {
+      margin: 0 0 0.75rem;
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .skill-tags {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.8rem 0.95rem;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      color: var(--text-soft);
+      min-height: 56px;
+    }
+
+    .force-list {
+      display: grid;
+      gap: 0.9rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .force-list li {
+      padding: 0.95rem 1rem;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      background: rgba(255, 255, 255, 0.025);
+      color: var(--text-soft);
+    }
+
+    .force-list strong {
+      color: var(--text);
+    }
+
+    .quote-card {
+      padding: 1.8rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .quote-card blockquote {
+      margin: 0;
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      line-height: 1.25;
+      color: var(--text);
+    }
+
+    .quote-card cite {
+      font-style: normal;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+    }
+
+    .recognition-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .recognition-card {
+      position: relative;
+      padding: 1.35rem;
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(180deg, rgba(214, 187, 142, 0.09), rgba(255, 255, 255, 0.02)),
+        rgba(17, 19, 25, 0.82);
+      border: 1px solid rgba(214, 187, 142, 0.16);
+    }
+
+    .recognition-card .label {
+      display: inline-flex;
+      margin-bottom: 0.8rem;
+      padding: 0.4rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--accent);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .recognition-card strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .ia-feature {
+      padding: 1.8rem;
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(circle at top right, rgba(139, 163, 199, 0.18), transparent 38%),
+        linear-gradient(145deg, rgba(214, 187, 142, 0.08), rgba(255, 255, 255, 0.02)),
+        rgba(15, 17, 23, 0.9);
+      border: 1px solid rgba(214, 187, 142, 0.14);
+      box-shadow: var(--shadow);
+    }
+
+    .process-row {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      margin-top: 1.3rem;
+    }
+
+    .process-step {
+      padding: 0.95rem 0.85rem;
+      border-radius: 14px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-soft);
+      font-size: 0.92rem;
+    }
+
+    .info-grid {
+      margin-top: 1.3rem;
+    }
+
+    .adn-grid {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .adn-card {
+      position: relative;
+      padding: 1.25rem 1.1rem 1.15rem;
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      min-height: 180px;
+    }
+
+    .adn-card .index {
+      display: inline-block;
+      margin-bottom: 0.8rem;
+      color: var(--accent);
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .adn-card strong {
+      display: block;
+      margin-bottom: 0.45rem;
+      color: var(--text);
+      font-family: var(--font-serif);
+      font-size: 1.12rem;
+      font-weight: 600;
+    }
+
+    .adn-card p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.94rem;
+    }
+
+    .gallery-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: stretch;
+    }
+
+    .visual-card {
+      position: relative;
+      min-height: 360px;
+    }
+
+    .visual-card figcaption {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 1.35rem;
+      z-index: 4;
+    }
+
+    .visual-card figcaption strong {
+      font-size: 1.2rem;
+    }
+
+    .conclusion-card {
+      padding: 2rem;
+    }
+
+    .conclusion-card h2 {
+      margin: 0 0 1rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    .contact-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1.5rem;
+    }
+
+    .contact-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.7rem 1rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-soft);
+      transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+    }
+
+    .contact-chip:hover,
+    .contact-chip:focus-visible {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(214, 187, 142, 0.2);
+      color: var(--text);
+      outline: none;
+    }
+
+    footer {
+      padding: 0 0 3rem;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-inner {
+      width: var(--container);
+      margin-inline: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 650ms ease, transform 650ms ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .identity-grid,
+      .btp-layout,
+      .photo-grid,
+      .conclusion-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .portrait-card {
+        position: static;
+      }
+
+      .metric-grid,
+      .formation-grid,
+      .skill-tags,
+      .process-row,
+      .adn-grid,
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      section {
+        padding: 4.4rem 0;
+      }
+
+      .topbar-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      main {
+        padding-top: 7.8rem;
+      }
+
+      .hero {
+        padding-top: 5.4rem;
+      }
+
+      .metric-grid,
+      .formation-grid,
+      .recognition-grid,
+      .info-grid,
+      .adn-grid,
+      .gallery-grid,
+      .skill-tags,
+      .process-row {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy h1 {
+        max-width: none;
+      }
+
+      .logo-panel {
+        min-height: 340px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar" id="top">
+    <div class="topbar-inner">
+      <a class="brand" href="#hero" aria-label="Retour en haut de page">
+        <span class="brand-mark">
+          <img
+            src="./logo_JLV.jpg"
+            alt="Logo Jean-Louis Viretti"
+            loading="eager"
+            decoding="async"
+            onload="this.parentElement.classList.add('has-logo')"
+            onerror="this.remove()"
+          >
+          <span class="brand-mark-fallback">JLV</span>
+        </span>
+        <span>Jean-Louis Viretti</span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#hero">Vue d'ensemble</a>
+        <a href="#qui-je-suis">Profil</a>
+        <a href="#formation">Formation</a>
+        <a href="#btp">BTP</a>
+        <a href="#photographie">Photographie</a>
+        <a href="#ia">IA</a>
+        <a href="#adn">ADN</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#conclusion">Conclusion</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow-row">
+            <span class="pill"><strong>Jean-Louis Viretti</strong></span>
+            <span class="pill">Ambassadeur technologique et investisseur</span>
+          </div>
+
+          <h1>Jean-Louis Viretti</h1>
+          <div class="subtitle">Parcours, expertise, regard, innovation</div>
+
+          <p class="hero-intro">
+            Ingénieur BTP de formation, Jean-Louis Viretti a construit un parcours de plus de quarante ans
+            dans un univers où l'exigence, la coordination et la décision concrète font la différence.
+            Son expérience s'est forgée sur le terrain, au contact des projets, des équipes, des délais
+            et des réalités opérationnelles. En parallèle, la photographie a développé un regard attentif
+            à la lumière, à la composition et à la justesse des détails. Aujourd'hui, sa passion affirmée
+            pour l'intelligence artificielle prolonge naturellement cette trajectoire : comprendre les
+            mutations en cours, expérimenter avec méthode, transmettre avec clarté et continuer à bâtir
+            vers l'avenir.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#btp">Explorer le parcours</a>
+            <a class="button secondary" href="#ia">Voir la vision IA</a>
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric-card">
+              <strong>40+ ans</strong>
+              <span>D'expérience, de responsabilités et de terrain</span>
+            </div>
+            <div class="metric-card">
+              <strong>3 univers</strong>
+              <span>BTP, photographie et intelligence artificielle</span>
+            </div>
+            <div class="metric-card">
+              <strong>1 ligne</strong>
+              <span>Rigueur, regard, transmission, avenir</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-side reveal">
+          <div class="logo-panel panel">
+            <div
+              class="media-slot logo-slot has-image"
+            >
+              <img
+                class="slot-image"
+                src="./fond%20d%27%C3%A9cran%20JLV.png"
+                alt="Visuel Jean-Louis Viretti"
+                loading="eager"
+                decoding="async"
+                style="object-fit: cover;"
+                onerror="this.remove(); this.parentElement.classList.remove('has-image');"
+              >
+              <div class="slot-frame"></div>
+              <div class="media-fallback">JLV</div>
+            </div>
+
+            <div class="hero-note">
+              <span>Exigence du concret</span>
+              <span>Regard d'auteur</span>
+              <span><strong>Énergie d'exploration</strong></span>
+            </div>
+          </div>
+
+          <div class="panel">
+            <p class="kicker">Ligne directrice</p>
+            <p>
+              Relier le monde du chantier, la précision du regard photographique et les nouveaux outils
+              de l'intelligence artificielle dans une même logique : observer, comprendre, structurer,
+              décider et transmettre.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="qui-je-suis">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="kicker">Qui je suis</p>
+          <h2>Une trajectoire longue, structurée et toujours en mouvement</h2>
+          <p>
+            Jean-Louis Viretti incarne un profil senior rare : solide dans l'expérience, clair dans le
+            jugement, attentif aux personnes et profondément curieux des transformations du monde.
+            Retraité très actif, il continue d'avancer avec méthode, exigence et ouverture.
+          </p>
+        </div>
+
+        <div class="identity-grid">
+          <article class="card reveal">
+            <h3>Portrait synthétique</h3>
+            <p>
+              Le fil conducteur de son parcours tient dans une même exigence de cohérence. Dans le BTP,
+              il a appris à penser juste, à organiser le réel, à faire tenir ensemble les contraintes
+              techniques, humaines et économiques. Avec le temps, cette expérience a forgé une capacité
+              précieuse : garder la vision d'ensemble sans perdre le sens du détail.
+            </p>
+            <p>
+              Cette maturité professionnelle s'accompagne d'une qualité relationnelle fondée sur
+              l'écoute, la responsabilité et le respect du travail bien mené. Il sait ce que demandent
+              les engagements concrets, les arbitrages délicats et les décisions qui engagent.
+            </p>
+            <p>
+              Aujourd'hui, son intérêt actif pour la technologie, l'innovation et l'intelligence
+              artificielle prolonge une dynamique déjà ancienne : rester curieux, apprendre en continu
+              et relier le monde concret au monde numérique avec une intelligence pratique, structurée
+              et résolument tournée vers l'avenir.
+            </p>
+          </article>
+
+          <aside class="portrait-card panel reveal">
+            <div
+              class="media-slot portrait-slot has-image"
+            >
+              <img
+                class="slot-image"
+                src="./photo%20de%20JLV.jpg"
+                alt="Portrait de Jean-Louis Viretti"
+                loading="eager"
+                decoding="async"
+                style="object-fit: cover;"
+                onerror="this.remove(); this.parentElement.classList.remove('has-image');"
+              >
+              <div class="slot-frame"></div>
+              <div class="slot-overlay"></div>
+              <div class="media-fallback">JLV</div>
+              <div class="slot-caption">
+                <strong>Présence, constance, discernement</strong>
+                <span>Une expérience construite dans la durée, sans rupture avec la curiosité.</span>
+              </div>
+            </div>
+
+            <div class="portrait-footer">
+              <span>Homme de terrain</span>
+              <span>Regard structuré</span>
+              <span>Transmission active</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="formation">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="kicker">Formation</p>
+          <h2>Un socle d'ingénieur, prolongé par l'apprentissage du réel</h2>
+          <p>
+            La formation de Jean-Louis Viretti s'appuie sur une base scientifique et technique orientée
+            BTP. Elle a ensuite été enrichie, année après année, par la pratique, la responsabilité,
+            l'observation et la montée en compétence au contact direct des projets.
+          </p>
+        </div>
+
+        <div class="formation-grid">
+          <article class="card reveal">
+            <h3>Formation initiale</h3>
+            <p>
+              Formation d'ingénieur BTP, avec un socle scientifique solide, une culture du calcul, de
+              la lecture technique, de l'analyse et de la rigueur opérationnelle. Cette base a donné à
+              l'ensemble du parcours sa cohérence : comprendre vite, structurer juste et décider sur
+              des éléments tangibles.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Compétences construites sur le terrain</h3>
+            <p>
+              Les savoirs se sont consolidés ensuite sur les chantiers, dans les opérations, dans la
+              relation avec les équipes, les entreprises, les clients et les partenaires. Une formation
+              vivante, continue, exigeante, nourrie par les responsabilités réelles.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Apprentissage continu</h3>
+            <p>
+              Au fil des années, la montée en compétence s'est poursuivie au-delà du cadre initial :
+              outils numériques, culture visuelle, veille technologique, usages émergents et exploration
+              active de l'intelligence artificielle.
+            </p>
+            <small>PowerShell, VS Code, GitHub, Ollama, NotebookLM, IA générative et veille numérique structurée prolongent aujourd'hui cette logique d'apprentissage continu.</small>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <section id="btp">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="kicker">Parcours dans le BTP</p>
+          <h2>Une carrière fondée sur la maîtrise du concret, des hommes et des décisions</h2>
+          <p>
+            Cette trajectoire s'inscrit dans l'univers de la construction, de l'immobilier, de
+            l'architecture opérationnelle, de la coordination et de la conduite de projets. Elle révèle
+            une intelligence du terrain capable de relier vision d'ensemble, contraintes réelles et
+            culture du résultat.
+          </p>
+        </div>
+
+        <div class="btp-layout">
+          <div class="timeline reveal">
+            <article class="timeline-item">
+              <div class="timeline-content">
+                <div class="timeline-meta">Fondations techniques</div>
+                <h3>Comprendre la matière du projet</h3>
+                <p>
+                  Premières années consacrées à l'appropriation des méthodes, à la lecture des plans,
+                  à la compréhension des interfaces entre conception, exécution et réalité de chantier.
+                </p>
+                <div class="timeline-meta">Premières responsabilités techniques et lecture fine du terrain</div>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-content">
+                <div class="timeline-meta">Montée en responsabilité</div>
+                <h3>Coordonner, suivre, faire avancer</h3>
+                <p>
+                  Renforcement progressif des responsabilités autour du suivi des opérations, de la
+                  coordination des acteurs, du respect des délais et de la qualité d'exécution.
+                </p>
+                <div class="timeline-meta">Progression constante dans la coordination, l'organisation et le suivi</div>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-content">
+                <div class="timeline-meta">Pilotage d'opérations</div>
+                <h3>Arbitrer dans la complexité</h3>
+                <p>
+                  Capacité à piloter des projets avec méthode, à organiser les priorités, à gérer les
+                  contraintes techniques, humaines et calendaires, et à tenir une ligne claire dans
+                  l'action.
+                </p>
+                <div class="timeline-meta">Pilotage d'opérations, arbitrage et responsabilité d'ensemble</div>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-content">
+                <div class="timeline-meta">Vision de synthèse</div>
+                <h3>Faire le lien entre technique, humain et décision</h3>
+                <p>
+                  Avec l'expérience, le regard devient plus large : lecture rapide des situations,
+                  capacité d'anticipation, dialogue avec les parties prenantes et recherche d'un
+                  équilibre durable entre exigence et faisabilité.
+                </p>
+                <div class="timeline-meta">Vision de synthèse forgée par plus de quarante ans de métier</div>
+              </div>
+            </article>
+          </div>
+
+          <aside class="btp-skills reveal">
+            <div class="skill-card">
+              <h3>Savoir-faire</h3>
+              <div class="skill-tags">
+                <span class="tag">Construction, immobilier et culture du bâti</span>
+                <span class="tag">Maîtrise d'œuvre, coordination et organisation</span>
+                <span class="tag">Suivi de chantiers, qualité et maîtrise du détail</span>
+                <span class="tag">Relation clients, entreprises et partenaires</span>
+                <span class="tag">Pilotage des délais, arbitrages et priorités</span>
+                <span class="tag">Lecture globale d'un projet et sens du résultat</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <h3>Marque de fabrique</h3>
+              <ul class="force-list">
+                <li><strong>Vision terrain :</strong> comprendre rapidement ce qui est faisable, ce qui bloque et ce qui doit être tranché.</li>
+                <li><strong>Rigueur sereine :</strong> avancer avec méthode sans perdre la qualité relationnelle indispensable aux projets complexes.</li>
+                <li><strong>Intelligence opérationnelle :</strong> relier les contraintes, les hommes, les délais et la décision utile.</li>
+                <li><strong>Culture du concret :</strong> transformer l'analyse en action, et l'action en résultat lisible.</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="photographie">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="kicker">Parcours photographique</p>
+          <h2>Une discipline du regard, au croisement de l'exigence et de la sensibilité</h2>
+          <p>
+            Développée en dehors de l'activité professionnelle principale, la photographie ne relève pas
+            d'un simple loisir : elle prolonge une manière d'observer, de composer, de patienter et de
+            lire le réel. Elle donne une profondeur supplémentaire à un parcours déjà marqué par
+            l'exigence et la précision.
+          </p>
+        </div>
+
+        <div class="photo-grid">
+          <div class="reveal">
+            <div class="quote-card">
+              <blockquote>
+                Un regard formé à la structure sait aussi reconnaître la lumière, la tension d'une ligne
+                juste et la valeur d'un instant parfaitement construit.
+              </blockquote>
+              <cite>Une pratique photographique comme prolongement du regard</cite>
+            </div>
+
+            <div class="recognition-grid" style="margin-top: 1.1rem;">
+              <article class="recognition-card">
+                <span class="label">Presse locale</span>
+                <strong>Tourves, PhotoSurRue 2018</strong>
+                <span class="muted-note">Nice-Matin mentionne les clichés de Jean-Louis Viretti parmi les photographes professionnels exposés lors du rendez-vous PhotoSurRue.</span>
+              </article>
+
+              <article class="recognition-card">
+                <span class="label">Côte d'Azur</span>
+                <strong>Saint-Tropez, Pampelonne, vitesse et lumière</strong>
+                <span class="muted-note">Des œuvres comme <em>Embarquement</em>, <em>Panpelone</em> et <em>Speed Start For ?</em> sont publiquement diffusées sur des plateformes de tirage autour de l'imaginaire tropézien.</span>
+              </article>
+
+              <article class="recognition-card">
+                <span class="label">Ville &amp; architecture</span>
+                <strong>Marseille, lignes, volumes, géométrie</strong>
+                <span class="muted-note"><em>Museum</em> situe le regard à Marseille, au voisinage du Mucem, tandis que <em>Chessboard Staircase</em> affirme une écriture très architecturée du noir et blanc.</span>
+              </article>
+
+              <article class="recognition-card">
+                <span class="label">Scène humaine</span>
+                <strong>Cannes, l'instant juste</strong>
+                <span class="muted-note"><em>Three Generations</em> est présenté comme une scène saisie dans une rue commerçante de Cannes, patiemment attendue puis construite par la rencontre du hasard et du cadrage.</span>
+              </article>
+
+              <article class="recognition-card">
+                <span class="label">Diffusion</span>
+                <strong>Jingoo, Artblr, Fine Art America, Pixels, 1X</strong>
+                <span class="muted-note">Le travail est visible entre galerie personnelle, page artiste et plateformes de tirages, avec une diffusion publique qui prolonge la pratique photographique au-delà du cercle privé.</span>
+              </article>
+
+              <article class="recognition-card">
+                <span class="label">Archives</span>
+                <strong>Menton, distinctions et séries événementielles</strong>
+                <span class="muted-note">Certaines références plus anciennes ou moins indexées publiquement méritent encore d'être documentées à partir des archives personnelles pour une chronologie fine.</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h3>Reconnaissances, expositions et publications</h3>
+            <p>
+              Les traces publiques disponibles montrent un travail photographique déjà installé, à la
+              fois dans la diffusion éditoriale, la présence en ligne et la circulation d'œuvres sur des
+              plateformes de tirages. Le regard s'y affirme dans plusieurs registres : scène de rue,
+              architecture, montagne, mer, instant humain et composition graphique.
+            </p>
+
+            <h3 style="margin-top: 1.6rem;">Une pratique photographique comme prolongement du regard</h3>
+            <p>
+              Photographier, ici, c'est observer sans précipitation, mesurer l'équilibre d'une scène,
+              comprendre ce que raconte une lumière et donner de la force à un détail juste. Cette
+              pratique rejoint le parcours professionnel par d'autres voies : patience, sens de la
+              composition, lecture des volumes, attention à l'instant et goût de la justesse.
+            </p>
+
+            <ul class="card-list" style="margin-top: 1.2rem;">
+              <li>Lire les lignes, les masses et les contrastes avant de déclencher.</li>
+              <li>Chercher la précision sans sacrifier l'émotion ni la profondeur.</li>
+              <li>Faire du détail un révélateur du tout.</li>
+              <li>Transformer une intuition visuelle en composition maîtrisée.</li>
+            </ul>
+
+            <h3 style="margin-top: 1.6rem;">Sites et liens repères</h3>
+            <ul class="card-list" style="margin-top: 1rem;">
+              <li><a class="text-link" href="https://www.jingoo.com/jlv/" target="_blank" rel="noreferrer noopener">Jingoo / JLV</a> : présentation d'un photographe à l'écoute des besoins personnels ou professionnels, avec reportages, portraits, événementiel et compétitions sportives.</li>
+              <li><a class="text-link" href="https://www.artblr.com/jlvphotos/fr" target="_blank" rel="noreferrer noopener">Artblr</a> : page artiste avec un manifeste clair du regard, centré sur l'émotion, l'instant et la transmission.</li>
+              <li><a class="text-link" href="https://fineartamerica.com/profiles/jean-louis-viretti" target="_blank" rel="noreferrer noopener">Fine Art America</a> et <a class="text-link" href="https://pixels.com/featured/museum-jean-louis-viretti.html" target="_blank" rel="noreferrer noopener">Pixels</a> : diffusion de tirages et d'œuvres comme <em>Museum</em>, <em>Three Generations</em>, <em>Chessboard Staircase</em> ou <em>La Jarjatte</em>.</li>
+              <li><a class="text-link" href="https://1x.com/jlvphotos" target="_blank" rel="noreferrer noopener">1X Photos</a> et <a class="text-link" href="https://www.art9000.com/francaise/art/artiste/impression-d-art/jean-louis-viretti/36053/1/733259/escalier-tatoo/index.htm" target="_blank" rel="noreferrer noopener">Art9000</a> : exemples de présence commerciale et de mise en circulation des tirages.</li>
+              <li><a class="text-link" href="https://www.nicematin.com/culture/les-univers-photographiques-dans-l-objectif-des-passionnes-les-enfants-heureux-de-prendre-part-aux-incroyables-comestibles-journee-joueuse-sur-le-cours-de-la-republique-233602" target="_blank" rel="noreferrer noopener">Nice-Matin</a> : mention publique de la présence de Jean-Louis Viretti à Tourves dans le cadre de PhotoSurRue.</li>
+            </ul>
+            <!-- Références évoquées mais non retrouvées sur source publique indexée à ce stade : détail de Menton, statut exact à Saint-Tropez, captations avec Pamela Anderson. À intégrer dès qu'un scan, programme ou lien d'archive sera disponible. -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ia">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="kicker">Passion pour l'intelligence artificielle</p>
+          <h2>Un nouveau terrain de construction, exploré avec méthode et enthousiasme</h2>
+          <p>
+            Pour Jean-Louis Viretti, l'intelligence artificielle n'est ni un effet de mode ni un simple
+            sujet de curiosité. C'est une transformation de fond, comparable aux grandes ruptures
+            technologiques qui redessinent durablement les usages, les métiers et les façons de produire,
+            d'apprendre et de transmettre.
+          </p>
+        </div>
+
+        <div class="ia-feature reveal">
+          <p>
+            Son approche de l'IA reste profondément concrète. Il compare les plateformes, teste les
+            nouveautés, observe les interfaces, évalue les workflows, s'intéresse aux agents, à
+            l'automatisation, aux outils créatifs et aux usages réellement utiles. Il avance comme un
+            bâtisseur : avec curiosité, méthode, structure et volonté de comprendre ce qui fonctionne,
+            pourquoi cela fonctionne, et comment le transmettre intelligemment.
+          </p>
+
+          <div class="process-row">
+            <div class="process-step">Observer</div>
+            <div class="process-step">Comparer</div>
+            <div class="process-step">Tester</div>
+            <div class="process-step">Structurer</div>
+            <div class="process-step">Transmettre</div>
+          </div>
+        </div>
+
+        <div class="info-grid">
+          <article class="card reveal">
+            <h3>Pourquoi l'IA</h3>
+            <p>
+              Parce qu'une révolution est en cours. Parce qu'elle change déjà le rapport au savoir, à
+              l'organisation, à la création et à la productivité. Et parce qu'il est essentiel de la
+              comprendre lucidement plutôt que de la subir.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Une curiosité active</h3>
+            <p>
+              L'exploration est quotidienne : outils conversationnels, modèles locaux, automatisation,
+              agents, veille, génération de contenus, interfaces, comparaisons de plateformes et usages
+              concrets orientés résultat. Cette dynamique se reflète aussi dans des publications publiques
+              consacrées à l'IA et à ses transformations.
+            </p>
+            <ul class="card-list" style="margin-top: 1rem;">
+              <li><a class="text-link" href="https://fr.linkedin.com/pulse/lintelligence-artificielle-pass%C3%A9-pr%C3%A9sent-et-futur-jean-louis-viretti--wccef" target="_blank" rel="noreferrer noopener">L'Intelligence Artificielle : Passé, Présent et Futur</a> publié le 28 octobre 2024.</li>
+              <li><a class="text-link" href="https://fr.linkedin.com/pulse/impact-de-lia-sur-lemploi-d%C3%A9fis-et-opportunit%C3%A9s-jean-louis-viretti--8jlhf" target="_blank" rel="noreferrer noopener">Impact de l'IA sur l'Emploi : Défis et Opportunités</a> publié le 10 octobre 2024.</li>
+              <li><a class="text-link" href="https://fr.linkedin.com/pulse/les-trois-pays-plus-avanc%C3%A9s-en-mati%C3%A8re-dintelligence-ia-viretti--sbnjf" target="_blank" rel="noreferrer noopener">Les trois pays les plus avancés en matière d'IA</a> publié le 11 novembre 2024.</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <h3>De l'expérimentation à la transmission</h3>
+            <p>
+              L'intérêt ne s'arrête pas au test. Il s'agit aussi d'expliquer, de partager, d'aider à
+              comprendre, de montrer ce qui est pertinent et de transformer l'exploration en savoir
+              transmissible.
+            </p>
+          </article>
+        </div>
+
+        <div class="info-grid">
+          <article class="card reveal">
+            <h3>Une vision tournée vers l'avenir</h3>
+            <p>
+              Après une vie professionnelle dense, rester en mouvement n'est pas un supplément : c'est
+              une manière d'habiter son époque. L'IA devient alors un espace d'élan, d'apprentissage,
+              d'ouverture et d'utilité pour les jeunes générations comme pour les professionnels en
+              transition.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Du chantier aux agents IA</h3>
+            <p>
+              Le parallèle est naturel : coordonner, architecturer, piloter, relier des briques,
+              anticiper les points de friction, optimiser un processus. L'IA est un nouveau champ
+              d'application pour une intelligence déjà construite par l'expérience.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Une ambition crédible</h3>
+            <p>
+              Relier expérience humaine, intelligence métier et technologies nouvelles. Faire émerger des
+              usages utiles, élégants, structurés et réellement transformants, sans perdre le sens du
+              réel ni la valeur du discernement humain.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="adn">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="kicker">Compétences / ADN</p>
+          <h2>Les piliers d'un profil à la fois expérimenté, singulier et tourné vers demain</h2>
+          <p>
+            Une synthèse de ce qui structure la trajectoire de Jean-Louis Viretti : expérience du réel,
+            intelligence du détail, curiosité technologique et volonté constante de transmettre.
+          </p>
+        </div>
+
+        <div class="adn-grid">
+          <article class="adn-card reveal">
+            <span class="index">01</span>
+            <strong>Expertise terrain</strong>
+            <p>Comprendre vite les contraintes réelles et agir avec pragmatisme.</p>
+          </article>
+
+          <article class="adn-card reveal">
+            <span class="index">02</span>
+            <strong>Conduite de projet</strong>
+            <p>Organiser, coordonner, arbitrer et garder le cap dans la complexité.</p>
+          </article>
+
+          <article class="adn-card reveal">
+            <span class="index">03</span>
+            <strong>Regard artistique</strong>
+            <p>Lire la lumière, les formes, les rythmes et la valeur des détails.</p>
+          </article>
+
+          <article class="adn-card reveal">
+            <span class="index">04</span>
+            <strong>Esprit d'analyse</strong>
+            <p>Aller à l'essentiel, structurer le diagnostic et décider avec clarté.</p>
+          </article>
+
+          <article class="adn-card reveal">
+            <span class="index">05</span>
+            <strong>Curiosité technologique</strong>
+            <p>Explorer les nouveaux outils avec sérieux, discernement et énergie.</p>
+          </article>
+
+          <article class="adn-card reveal">
+            <span class="index">06</span>
+            <strong>Sens de la transmission</strong>
+            <p>Partager l'expérience, rendre lisible et aider à monter en compréhension.</p>
+          </article>
+
+          <article class="adn-card reveal">
+            <span class="index">07</span>
+            <strong>Vision stratégique</strong>
+            <p>Voir plus large sans perdre la rigueur de l'exécution.</p>
+          </article>
+
+          <article class="adn-card reveal">
+            <span class="index">08</span>
+            <strong>Capacité d'adaptation</strong>
+            <p>Évoluer avec son époque sans renoncer à la solidité des fondamentaux.</p>
+          </article>
+
+          <article class="adn-card reveal">
+            <span class="index">09</span>
+            <strong>Innovation</strong>
+            <p>Accueillir les ruptures comme des terrains d'exploration et d'utilité.</p>
+          </article>
+
+          <article class="adn-card reveal">
+            <span class="index">10</span>
+            <strong>Rigueur</strong>
+            <p>Faire simple, propre et fiable, avec une exigence constante de qualité.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="galerie">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="kicker">Galerie / Visuels</p>
+          <h2>Des espaces ouverts pour montrer le regard, la matière et les futurs possibles</h2>
+          <p>
+            Cette zone est prête à accueillir des photographies, schémas, documents, repères visuels ou
+            images d'ambiance. Les trois emplacements ci-dessous chargent automatiquement des fichiers
+            locaux si présents dans le dossier du projet.
+          </p>
+          <!-- Remplacer simplement 1.jpg, 2.jpg et 3.jpg par les visuels souhaités -->
+        </div>
+
+        <div class="gallery-grid">
+          <figure
+            class="visual-card media-slot gallery-slot reveal has-image"
+          >
+            <img
+              class="slot-image"
+              src="./1.jpg"
+              alt="Visuel galerie BTP"
+              loading="lazy"
+              decoding="async"
+              style="object-fit: cover;"
+              onerror="this.remove(); this.parentElement.classList.remove('has-image');"
+            >
+            <div class="slot-frame"></div>
+            <div class="slot-overlay"></div>
+            <div class="media-fallback">BTP</div>
+            <figcaption>
+              <strong>Structure &amp; perspective</strong>
+              <span>Le sens des lignes, des équilibres et de l'organisation du réel.</span>
+            </figcaption>
+          </figure>
+
+          <figure
+            class="visual-card media-slot gallery-slot reveal has-image"
+          >
+            <img
+              class="slot-image"
+              src="./2.jpg"
+              alt="Visuel galerie photographie"
+              loading="lazy"
+              decoding="async"
+              style="object-fit: cover;"
+              onerror="this.remove(); this.parentElement.classList.remove('has-image');"
+            >
+            <div class="slot-frame"></div>
+            <div class="slot-overlay"></div>
+            <div class="media-fallback">Photographie</div>
+            <figcaption>
+              <strong>Composition &amp; détail</strong>
+              <span>Une écriture visuelle guidée par la précision et la sensibilité.</span>
+            </figcaption>
+          </figure>
+
+          <figure
+            class="visual-card media-slot gallery-slot reveal has-image"
+          >
+            <img
+              class="slot-image"
+              src="./3.jpg"
+              alt="Visuel galerie horizon"
+              loading="lazy"
+              decoding="async"
+              style="object-fit: cover;"
+              onerror="this.remove(); this.parentElement.classList.remove('has-image');"
+            >
+            <div class="slot-frame"></div>
+            <div class="slot-overlay"></div>
+            <div class="media-fallback">IA</div>
+            <figcaption>
+              <strong>Horizon &amp; exploration</strong>
+              <span>Regarder loin, expérimenter juste, construire les usages de demain.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="conclusion">
+      <div class="container conclusion-grid">
+        <div class="conclusion-card reveal">
+          <p class="kicker">Conclusion</p>
+          <h2>L'expérience, le regard, la création et la technologie dans une même continuité</h2>
+          <p>
+            Le parcours de Jean-Louis Viretti raconte plus qu'une carrière : il exprime une manière
+            d'habiter le temps. Construire avec sérieux. Observer avec finesse. Créer avec exigence.
+            Comprendre les transformations sans jamais se laisser déborder par elles.
+          </p>
+          <p>
+            À la rencontre du BTP, de la photographie et de l'intelligence artificielle se dessine un
+            profil profondément humain, crédible, singulier et tourné vers l'avenir. Une présence qui
+            inspire confiance, donne envie d'échanger et ouvre naturellement la porte à de nouvelles
+            conversations.
+          </p>
+
+          <div class="contact-strip">
+            <a class="contact-chip" href="mailto:jlv1960@pm.me">jlv1960@pm.me</a>
+            <a class="contact-chip" href="tel:+33676847391">+33 6 76 84 73 91</a>
+            <a class="contact-chip" href="https://www.jingoo.com/jlv/" target="_blank" rel="noreferrer noopener">Portfolio photo</a>
+            <a class="contact-chip" href="https://fr.linkedin.com/pulse/lintelligence-artificielle-pass%C3%A9-pr%C3%A9sent-et-futur-jean-louis-viretti--wccef" target="_blank" rel="noreferrer noopener">Article IA</a>
+          </div>
+
+          <p class="muted-note" style="margin-top: 1.1rem;">
+            Contact direct, échanges professionnels, transmission d'expérience, photographie, innovation et intelligence artificielle.
+          </p>
+        </div>
+
+        <aside class="panel reveal">
+          <p class="kicker">En une phrase</p>
+          <p>
+            Une vie d'expérience mise au service d'un regard juste, d'une curiosité intacte et d'une
+            volonté claire : comprendre le monde qui vient sans renoncer à la profondeur du réel.
+          </p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>Jean-Louis Viretti</span>
+      <span>avril 2026 · @copyright Jean-Louis Viretti</span>
+    </div>
+  </footer>
+
+  <script>
+    function initReveal() {
+      const items = document.querySelectorAll(".reveal");
+
+      if (!("IntersectionObserver" in window)) {
+        items.forEach((item) => item.classList.add("is-visible"));
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.16,
+          rootMargin: "0px 0px -40px 0px"
+        }
+      );
+
+      items.forEach((item) => observer.observe(item));
+    }
+
+    function initNavState() {
+      const topbar = document.querySelector(".topbar");
+      const links = Array.from(document.querySelectorAll(".nav a"));
+      const sections = Array.from(document.querySelectorAll("main section[id]"));
+
+      const setScrolledState = () => {
+        topbar.classList.toggle("is-scrolled", window.scrollY > 18);
+      };
+
+      setScrolledState();
+      window.addEventListener("scroll", setScrolledState, { passive: true });
+
+      if (!("IntersectionObserver" in window)) {
+        return;
+      }
+
+      const linkById = new Map(
+        links.map((link) => [link.getAttribute("href").slice(1), link])
+      );
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+            links.forEach((link) => link.classList.remove("active"));
+            const activeLink = linkById.get(entry.target.id);
+            if (activeLink) {
+              activeLink.classList.add("active");
+            }
+          });
+        },
+        {
+          threshold: 0.45,
+          rootMargin: "-20% 0px -45% 0px"
+        }
+      );
+
+      sections.forEach((section) => observer.observe(section));
+    }
+
+    initReveal();
+    initNavState();
+  </script>
+</body>
+</html>
